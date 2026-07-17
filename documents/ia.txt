@@ -1,0 +1,17 @@
+La inteligencia artificial es una rama de la informática cuyo objetivo consiste en desarrollar sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estas tareas incluyen el reconocimiento de imágenes, la comprensión del lenguaje, la toma de decisiones y la resolución de problemas.
+
+Dentro de la inteligencia artificial existen numerosas disciplinas. El aprendizaje automático o Machine Learning permite que los algoritmos aprendan patrones a partir de los datos sin necesidad de programar explícitamente todas las reglas.
+
+Una de las áreas más importantes es el aprendizaje profundo o Deep Learning. Esta disciplina utiliza redes neuronales con múltiples capas capaces de aprender representaciones muy complejas de la información.
+
+Los modelos de lenguaje de gran tamaño, conocidos como Large Language Models o LLM, han revolucionado el procesamiento del lenguaje natural. Estos modelos se entrenan utilizando enormes cantidades de texto y posteriormente pueden responder preguntas, resumir documentos, traducir idiomas o generar código.
+
+El entrenamiento de un modelo suele dividirse en varias etapas. Primero se realiza un preentrenamiento sobre grandes cantidades de datos y posteriormente puede realizarse un ajuste fino o Fine-Tuning para tareas específicas.
+
+Otra técnica muy utilizada actualmente es el Retrieval-Augmented Generation o RAG. En lugar de depender únicamente del conocimiento almacenado en el modelo, un sistema RAG recupera información relevante desde documentos externos antes de generar una respuesta.
+
+Los embeddings permiten representar textos mediante vectores numéricos. Gracias a estas representaciones es posible calcular similitudes semánticas entre preguntas y documentos utilizando métricas como la similitud coseno.
+
+Los agentes de inteligencia artificial amplían las capacidades de los modelos de lenguaje permitiéndoles utilizar herramientas externas, consultar bases de datos, ejecutar código o navegar por Internet para completar tareas complejas.
+
+Actualmente la inteligencia artificial se utiliza en medicina, finanzas, industria, robótica, vehículos autónomos, asistentes virtuales y multitud de aplicaciones cotidianas.

@@ -1,22 +1,53 @@
 import requests
+from config import GEN_MODEL, EMBED_MODEL, GEN_URL, EMBED_URL
 
-URL = "http://localhost:11434/api/generate"
+def ask_ollama_with_context(
+    question: str,
+    context: str | None = None,
+    model: str = GEN_MODEL,
+) -> str:
 
+    instructions = """
+    Eres un asistente útil.
+    Responde priorizando la información del contexto.
+    Si el contexto no contiene la respuesta, no la saques de tu conocimiento general.
+    Si no tienes la respuesta. no te inventes información, simplemente contesta diciendo que no lo sabes.
+    """
+    
+    prompt = f"Instrucciones: {instructions}\nContexto: {context if context else 'Ninguno'}\nPregunta: {question}"
+    return _ask_ollama(prompt, model)
 
-def ask_ollama(question, model = "qwen3:8b", stream = False):
+def get_embedding(text: str) -> list[float]:
+    return get_embeddings([text])[0]
+
+def get_embeddings(
+    texts: list[str],
+    model: str = EMBED_MODEL,
+) -> list[list[float]]:
+    
     payload = {
         "model": model,
-        "prompt": question,
+        "input": texts
+    }
+    response = requests.post(EMBED_URL, json=payload)
+    response.raise_for_status()
+
+    return response.json()["embeddings"]
+
+
+def _ask_ollama(
+    prompt: str,
+    model: str = GEN_MODEL,
+    stream: bool = False,
+) -> str:
+    
+    payload = {
+        "model": model,
+        "prompt": prompt,
         "stream": stream
     }
 
-    response = requests.post(URL, json=payload)
-    
-    if response.status_code != 200:
-        raise Exception(f"Error {response.status_code}") 
-    return response.json()["response"]
+    response = requests.post(GEN_URL, json=payload)
+    response.raise_for_status()
 
-def ask_ollama_with_context(question, context = None, model = "qwen3:8b"):
-    instructions = "Responde utilizando únicamente la información del contexto. Si el contexto no contiene la respuesta, di 'No lo sé'."
-    prompt = f"Instrucciones: {instructions}\nContexto: {context if context else 'Ninguno'}\nPregunta: {question}"
-    return ask_ollama(prompt, model)
+    return response.json()["response"]

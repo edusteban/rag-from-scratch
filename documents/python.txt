@@ -1,0 +1,17 @@
+Python es un lenguaje de programación creado por Guido van Rossum y publicado por primera vez en 1991. Se diseñó con el objetivo de ser un lenguaje sencillo de leer y escribir, favoreciendo la productividad del desarrollador mediante una sintaxis clara y expresiva.
+
+Actualmente Python es uno de los lenguajes más utilizados del mundo. Se emplea en desarrollo web, automatización, análisis de datos, inteligencia artificial, aprendizaje automático, desarrollo de videojuegos, administración de sistemas y computación científica.
+
+Una de las mayores ventajas de Python es su enorme ecosistema de librerías. NumPy proporciona operaciones eficientes sobre matrices, Pandas facilita el análisis de datos tabulares, Matplotlib permite generar gráficos y Scikit-learn incluye numerosos algoritmos clásicos de Machine Learning.
+
+En el ámbito de la inteligencia artificial destacan especialmente TensorFlow y PyTorch. Ambas bibliotecas permiten construir y entrenar redes neuronales profundas para tareas como clasificación de imágenes, procesamiento de lenguaje natural o generación de texto.
+
+Python también es ampliamente utilizado en robótica gracias a frameworks como ROS y ROS2. Estos entornos permiten crear sistemas distribuidos mediante nodos que se comunican intercambiando mensajes, facilitando el desarrollo de vehículos autónomos, drones y robots industriales.
+
+El lenguaje soporta distintos paradigmas de programación, incluyendo programación orientada a objetos, programación funcional y programación imperativa. Esta flexibilidad permite adaptar el estilo de programación a las necesidades del proyecto.
+
+Python posee un sistema automático de gestión de memoria mediante un recolector de basura. Esto reduce la complejidad para el desarrollador aunque, en aplicaciones de muy alto rendimiento, puede resultar menos eficiente que lenguajes como C++.
+
+Una de las razones de la popularidad de Python es su curva de aprendizaje. Su sintaxis sencilla permite que muchos estudiantes aprendan conceptos fundamentales de programación sin tener que preocuparse inicialmente por detalles complejos del lenguaje.
+
+El creador de Python es Guido van Rossum, quien dirigió el desarrollo del lenguaje durante muchos años y sigue siendo una figura muy influyente dentro de la comunidad.
